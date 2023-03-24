@@ -1,0 +1,92 @@
+<div class="container">
+    <h1 style="margin-top: 30px; font-weight: bold;">Schedule a Demo Drive</h1>
+    <p>Demo Drive a Tesla at a store near you. Drivers must have a valid India driver's license and be 18 years of age
+        or older.
+    </p>
+    <div class="row ">
+        <div class="col-12">
+            <img [src]="currentImage" id="image">
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-3 col-xl-3 col-xxl-3">
+
+            <button class="custom-btn btn-16" (click)="ChangeThePicture($event,0)">Model S</button>
+        </div>
+        <div class="col-12 col-md-3 col-xl-3 col-xxl-3">
+
+            <button class="custom-btn btn-16" (click)="ChangeThePicture($event,1)">Model 3</button>
+        </div>
+        <div class="col-12 col-md-3 col-xl-3 col-xxl-3">
+
+            <button class="custom-btn btn-16" (click)="ChangeThePicture($event,2)">Model X</button>
+        </div>
+        <div class="col-12 col-md-3 col-xl-3 col-xxl-3">
+
+            <button class="custom-btn btn-16" (click)="ChangeThePicture($event,3)">Model Y</button>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+
+    <div>
+        <h2 style="font-weight: bold;">Contact Information</h2>
+        <br><br><br><br>
+        <form>
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstname" aria-describedby="textHelp">
+
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                        <label for="phone" class="form-label">Contact number</label>
+                
+                        <input type="tel" value="+91 " id="phone" class="form-control" name="phone" intlTelInput>    
+
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                        <label for="zip" class="form-label">Zip Code</label>
+                
+                        <input type="number" id="zip" class="form-control" name="zip" (change)="getAdd($event)">    
+
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" matInput class="form-control" name="city" id="city" [(ngModel)]="district" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 col-xxl-4">
+                        <label for="state" class="form-label">State</label>
+                
+                        <input type="text" matInput class="form-control" name="state" id="state" [(ngModel)]="state" disabled>   
+
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+</div>
